@@ -1,5 +1,6 @@
 import logo from "./logo.svg";
 import "./App.css";
+import "@fontsource/dm-sans"; // Defaults to weight 400
 import {
   createBrowserRouter,
   createRoutesFromElements,
