@@ -1,15 +1,26 @@
 .input-container {
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px 15px;
+  gap: 10px;
+
+  position: absolute;
+  width: 388px;
+  height: 92px;
+  left: 1px;
+  top: 167px;
 }
 
 .input-field {
   width: 100%;
-  padding: 10px;
+  padding: 10%;
   margin: 30px;
   font-size: 16px;
   border: none; /* Remove default black border */
   border-left: 1px solid #b2b2b2; /* Only border on the left side */
   box-sizing: border-box;
+  font-family: "DM Sans", sans-serif;
 }
 
 .input-field:focus {
@@ -24,9 +35,20 @@
   left: 10px;
   transform: translateY(-50%);
   color: #aaa; /* Placeholder text color */
+  font-family: "DM Sans", sans-serif;
+  width:;
 }
 
 .input-field::placeholder {
-  color: black; /* Hide the default placeholder text */
   font-family: "DM Sans", sans-serif;
+  position: absolute;
+  width: 235px;
+  height: 30px;
+  left: calc(50% - 235px / 2 - 46.5px);
+  top: calc(50% - 30px / 2);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 23px;
+  line-height: 30px;
+  color: #898989;
 }

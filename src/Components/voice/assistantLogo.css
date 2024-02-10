@@ -1,12 +1,18 @@
 .assistant-frame {
-  align-items: center;
-  border-radius: 46px;
-  display: inline-flex;
-  gap: 5px;
-  justify-content: center;
-  padding: 10px 21px;
-  position: relative;
   background-color: #0077ff1e;
+  border-radius: 46px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 21px;
+  gap: 5px;
+
+  position: absolute;
+  width: 156px;
+  height: 47.17px;
+  left: calc(50% - 156px / 2);
+  top: 52px;
 }
 
 .assistant-frame .group {
