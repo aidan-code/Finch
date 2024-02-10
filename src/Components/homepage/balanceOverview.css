@@ -1,0 +1,129 @@
+.balance-overview {
+  align-items: flex-start;
+  display: inline-flex;
+  flex-direction: column;
+  gap: 10px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 10px;
+}
+
+.balance-overview .background {
+  height: 238px;
+  position: relative;
+  width: 390px;
+}
+
+.balance-overview .div {
+  align-items: center;
+  display: inline-flex;
+  flex-direction: column;
+  gap: 29px;
+  left: calc(50% - 104px);
+  position: absolute;
+  top: 40px;
+}
+
+.balance-overview.div-2 {
+  align-items: center;
+  display: inline-flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 12px;
+  position: relative;
+}
+
+.balance-overview .div-3 {
+  align-items: center;
+  display: inline-flex;
+  flex: 0 0 auto;
+  gap: 5px;
+  justify-content: center;
+  position: relative;
+}
+
+.balance-overview .text-wrapper {
+  color: #909090;
+  font-family: "DM Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: normal;
+  margin-top: -1px;
+  position: relative;
+  width: fit-content;
+}
+
+.balance-overview .ellipse {
+  background-color: #d9d9d9;
+  border-radius: 1.5px;
+  height: 3px;
+  position: relative;
+  width: 3px;
+}
+
+.balance-overview .div-4 {
+  align-items: flex-start;
+  display: inline-flex;
+  flex: 0 0 auto;
+  gap: 5px;
+  position: relative;
+}
+
+.balance-overview .dollars {
+  color: #454545;
+  font-family: "DM Sans", sans-serif;
+  font-size: 45px;
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: normal;
+  margin-top: -1px;
+  position: relative;
+  width: fit-content;
+}
+
+.balance-overview .cents {
+  color: #aaaaaaaa;
+  font-family: "DM Sans", sans-serif;
+  font-size: 38px;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: normal;
+  margin-top: -1px;
+  position: relative;
+  width: fit-content;
+}
+
+.balance-overview .account-dropdown {
+  -webkit-backdrop-filter: blur(40px) brightness(100%);
+  align-items: center;
+  backdrop-filter: blur(40px) brightness(100%);
+  background-color: #ffffffe0;
+  border-radius: 46px;
+  display: inline-flex;
+  flex: 0 0 auto;
+  gap: 5px;
+  justify-content: center;
+  padding: 10px 21px;
+  position: relative;
+}
+
+.balance-overview .text-wrapper-2 {
+  color: #645f5f;
+  font-family: "DM Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: normal;
+  margin-top: -1px;
+  position: relative;
+  width: fit-content;
+}
+
+.balance-overview .caretup-icon {
+  height: 10px;
+  position: relative;
+  width: 10px;
+}

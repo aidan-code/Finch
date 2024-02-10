@@ -1,0 +1,27 @@
+.assistant-frame {
+  align-items: center;
+  border-radius: 46px;
+  display: inline-flex;
+  gap: 5px;
+  justify-content: center;
+  padding: 10px 21px;
+  position: relative;
+  background-color: #0077ff1e;
+}
+
+.assistant-frame .group {
+  height: 27.17px;
+  position: relative;
+  width: 29px;
+}
+
+.assistant-frame .text-wrapper {
+  color: #0075ff;
+  font-family: "DM Sans", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: normal;
+  position: relative;
+  width: fit-content;
+}

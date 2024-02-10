@@ -1,0 +1,32 @@
+.input-container {
+  position: relative;
+}
+
+.input-field {
+  width: 100%;
+  padding: 10px;
+  margin: 30px;
+  font-size: 16px;
+  border: none; /* Remove default black border */
+  border-left: 1px solid #b2b2b2; /* Only border on the left side */
+  box-sizing: border-box;
+}
+
+.input-field:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+.input-container::before {
+  content: attr(data-placeholder);
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  color: #aaa; /* Placeholder text color */
+}
+
+.input-field::placeholder {
+  color: black; /* Hide the default placeholder text */
+  font-family: "DM Sans", sans-serif;
+}
