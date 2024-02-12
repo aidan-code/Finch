@@ -1,15 +1,14 @@
-import React from "react";
-import "./VoiceInput.css"; // Import CSS file for styling
+import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { useState, useEffect } from "react";
 import ResponseComponent from "./responseComponent";
 
 const voiceflowApiKey = "VF.DM.659966b38e056e0007a70011.1dVnphfYAFKc04Dl"; // Replace with your actual Voiceflow API key
 const userID = "user_123";
 
-export const VoiceInput = ({ placeholder, value, onChange }) => {
+const VoiceInput = ({ initialPlaceholder }) => {
   const [inputValue, setInputValue] = useState("");
   const [outputValue, setOutputValue] = useState("");
+  const [placeholder, setPlaceholder] = useState(initialPlaceholder);
 
   useEffect(() => {
     const recognition = new window.webkitSpeechRecognition();
@@ -20,6 +19,7 @@ export const VoiceInput = ({ placeholder, value, onChange }) => {
     recognition.onresult = async (event) => {
       const transcript = event.results[0][0].transcript;
       setInputValue(transcript);
+      setPlaceholder(""); // Clear placeholder when listening
 
       const response = await axios.post(
         `https://general-runtime.voiceflow.com/state/user/${userID}/interact`,
@@ -47,27 +47,28 @@ export const VoiceInput = ({ placeholder, value, onChange }) => {
       setOutputValue(message);
 
       setTimeout(() => {
-        const secondMessage =
-          response.data[2]?.payload?.message || "No response from Voiceflow";
-        setOutputValue(secondMessage);
-      }, 2000);
+        setInputValue(""); // Clear input after processing result
+        setPlaceholder(initialPlaceholder); // Restore placeholder after processing result
+        recognition.start(); // Continue listening
+      }, 500);
     };
 
-    recognition.start();
+    recognition.start(); // Start listening when component mounts
 
     return () => {
       recognition.stop();
     };
-  }, [userID, voiceflowApiKey]);
+  }, [initialPlaceholder]);
 
   return (
     <div>
       <div className="input-container">
         <input
-          type={"text"} // Specify input type (e.g., text, email, password)
-          placeholder={"'Exchange rate today'"} // Placeholder text for input field
-          value={inputValue} // Value of the input field
-          className="input-field" // CSS class for styling the input field
+          type="text"
+          placeholder={placeholder}
+          value={inputValue}
+          className="input-field"
+          readOnly // Make input field read-only to prevent manual input
         />
       </div>
       <ResponseComponent response={outputValue} />
