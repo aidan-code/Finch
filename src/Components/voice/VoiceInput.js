@@ -13,12 +13,12 @@ const VoiceInput = ({ initialPlaceholder }) => {
   useEffect(() => {
     const recognition = new window.webkitSpeechRecognition();
     recognition.lang = "en-US";
-    recognition.interimResults = false;
+    recognition.interimResults = true; // Set interimResults to true to get interim results
     recognition.maxAlternatives = 1;
 
     recognition.onresult = async (event) => {
-      const transcript = event.results[0][0].transcript;
-      setInputValue(transcript);
+      const interimTranscript = event.results[0][0].transcript;
+      setInputValue(interimTranscript);
       setPlaceholder(""); // Clear placeholder when listening
 
       const response = await axios.post(
@@ -26,7 +26,7 @@ const VoiceInput = ({ initialPlaceholder }) => {
         {
           action: {
             type: "text",
-            payload: transcript,
+            payload: interimTranscript, // Use interim transcript for interaction
           },
           config: {
             tts: true,
@@ -45,12 +45,6 @@ const VoiceInput = ({ initialPlaceholder }) => {
       const message =
         response.data[1]?.payload?.message || "No response from Voiceflow";
       setOutputValue(message);
-
-      setTimeout(() => {
-        setInputValue(""); // Clear input after processing result
-        setPlaceholder(initialPlaceholder); // Restore placeholder after processing result
-        recognition.start(); // Continue listening
-      }, 500);
     };
 
     recognition.start(); // Start listening when component mounts
@@ -58,7 +52,51 @@ const VoiceInput = ({ initialPlaceholder }) => {
     return () => {
       recognition.stop();
     };
-  }, [initialPlaceholder]);
+  }, []); // Empty dependency array ensures useEffect runs only once
+
+  useEffect(() => {
+    // After each response, clear the input and set it back to listening
+    setInputValue("");
+    setPlaceholder(initialPlaceholder);
+    const recognition = new window.webkitSpeechRecognition();
+    recognition.lang = "en-US";
+    recognition.interimResults = true;
+    recognition.maxAlternatives = 1;
+    recognition.onresult = async (event) => {
+      const interimTranscript = event.results[0][0].transcript;
+      setInputValue(interimTranscript);
+      setPlaceholder(""); // Clear placeholder when listening
+
+      const response = await axios.post(
+        `https://general-runtime.voiceflow.com/state/user/${userID}/interact`,
+        {
+          action: {
+            type: "text",
+            payload: interimTranscript, // Use interim transcript for interaction
+          },
+          config: {
+            tts: true,
+            stripSSML: true,
+            stopAll: true,
+            excludeTypes: ["block", "debug", "flow"],
+          },
+        },
+        {
+          headers: {
+            Authorization: voiceflowApiKey,
+          },
+        },
+      );
+
+      const message =
+        response.data[1]?.payload?.message || "No response from Voiceflow";
+      setOutputValue(message);
+    };
+    recognition.start();
+    return () => {
+      recognition.stop();
+    };
+  }, [outputValue, initialPlaceholder]);
 
   return (
     <div>
