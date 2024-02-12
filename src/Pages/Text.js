@@ -1,6 +1,6 @@
 import AssistantLogo from "../Components/text/assistantLogo";
 import Input from "../Components/text/input";
-import ResponseComponent from "../Components/voice/responseComponent";
+import ResponseComponent from "../Components/text/responseComponent";
 import Keyboard from "../Components/text/textButton";
 import "./Text.css";
 

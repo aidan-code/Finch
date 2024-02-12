@@ -1,14 +1,14 @@
 import AssistantLogo from "../Components/voice/assistantLogo";
-import Input from "../Components/voice/input";
+import VoiceInput from "../Components/voice/VoiceInput";
 import ResponseComponent from "../Components/voice/responseComponent";
-import Mic from "../Components/voice/textButton";
+import Mic from "../Components/voice/voiceButton";
 
 import "./Voice.css";
 
 const Voice = () => {
   return (
     <div className="Voice">
-      <Input />
+      <VoiceInput />
       <AssistantLogo />
       <Mic />
       <ResponseComponent />

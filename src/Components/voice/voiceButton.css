@@ -1,4 +1,4 @@
-.mic-frame {
+.keyboard-frame {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
@@ -13,13 +13,13 @@
   bottom: 20px; /* Adjust position from top to bottom */
 }
 
-.mic-frame keyboard {
+.keyboard-frame keyboard {
   height: 47px;
   position: relative;
   width: 47px;
 }
 
-.mic-frame .mic-icon {
+.keyboard-frame .mic-icon {
   position: absolute;
   left: 85.38%;
   right: 5.9%;

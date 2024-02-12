@@ -1,17 +1,12 @@
 import React from "react";
 import "./textButton.css";
-import keyboardIcon from "../../Assets/keyboard.svg";
-import { keyboard } from "@testing-library/user-event/dist/keyboard";
+import MicIcon from "../../Assets/Mic.svg";
 
 export const Keyboard = () => {
   return (
-    <div className="keyboard-frame">
-      <div className="keyboard">
-        <img
-          className="solar-keyboard-bold"
-          alt="Solar keyboard bold"
-          src={keyboardIcon}
-        />
+    <div className="mic-frame">
+      <div className="mic">
+        <img className="microphone-bold" alt="microphone bold" src={MicIcon} />
       </div>
     </div>
   );

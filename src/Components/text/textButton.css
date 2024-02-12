@@ -1,4 +1,4 @@
-.keyboard-frame {
+.mic-frame {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
@@ -13,13 +13,13 @@
   bottom: 20px; /* Adjust position from top to bottom */
 }
 
-.keyboard-frame keyboard {
+.mic-frame mic {
   height: 47px;
   position: relative;
   width: 47px;
 }
 
-.keyboard-frame .solar-keyboard-bold {
+.mic-frame .microphone-bold {
   position: absolute;
   left: 85.38%;
   right: 5.9%;

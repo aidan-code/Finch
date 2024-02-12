@@ -9,11 +9,13 @@ import {
 } from "react-router-dom";
 import HomePage from "./Pages/Homepage";
 import Voice from "./Pages/Voice";
+import Text from "./Pages/Text";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route>
       <Route path="/" element={<HomePage />} />
+      <Route path="/text" element={<Text />} />
       <Route path="/voice" element={<Voice />} />
     </Route>,
   ),
