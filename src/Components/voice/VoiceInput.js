@@ -4,6 +4,7 @@ import ResponseComponent from "./responseComponent";
 import keyboardIcon from "../../Assets/keyboard.svg";
 import MicIcon from "../../Assets/Mic.svg";
 import "./voiceButton.css"; // Import CSS file if necessary
+import { useNavigate } from "react-router-dom"; // Import useNavigate from React Router
 
 const voiceflowApiKey = "VF.DM.659966b38e056e0007a70011.1dVnphfYAFKc04Dl"; // Replace with your actual Voiceflow API key
 const userID = "user_123";
@@ -14,6 +15,7 @@ const VoiceInput = ({ initialPlaceholder }) => {
   const [outputValue, setOutputValue] = useState("");
   const [placeholder, setPlaceholder] = useState(initialPlaceholder);
   const [recognition, setRecognition] = useState(null); // State to hold the recognition object
+  const navigate = useNavigate(); // Get navigate function from React Router
 
   useEffect(() => {
     if (inputMode === "voice") {
@@ -62,6 +64,13 @@ const VoiceInput = ({ initialPlaceholder }) => {
       };
     }
   }, [inputMode]); // Run effect when input mode changes
+
+  useEffect(() => {
+    if (outputValue === "Your savings balance is $5420") {
+      // Trigger navigation to the homepage
+      navigate("/");
+    }
+  }, [outputValue, navigate]); // Run effect when outputValue changes
 
   const handleMicClick = () => {
     // Handle click event for MicIcon
