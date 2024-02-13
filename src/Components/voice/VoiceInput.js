@@ -13,15 +13,16 @@ const VoiceInput = ({ initialPlaceholder }) => {
   const [inputValue, setInputValue] = useState("");
   const [outputValue, setOutputValue] = useState("");
   const [placeholder, setPlaceholder] = useState(initialPlaceholder);
+  const [recognition, setRecognition] = useState(null); // State to hold the recognition object
 
   useEffect(() => {
     if (inputMode === "voice") {
-      const recognition = new window.webkitSpeechRecognition();
-      recognition.lang = "en-US";
-      recognition.interimResults = true; // Set interimResults to true to get interim results
-      recognition.maxAlternatives = 1;
+      const recognitionInstance = new window.webkitSpeechRecognition();
+      recognitionInstance.lang = "en-US";
+      recognitionInstance.interimResults = true; // Set interimResults to true to get interim results
+      recognitionInstance.maxAlternatives = 1;
 
-      recognition.onresult = async (event) => {
+      recognitionInstance.onresult = async (event) => {
         const interimTranscript = event.results[0][0].transcript;
         setInputValue(interimTranscript);
         setPlaceholder(""); // Clear placeholder when listening
@@ -52,10 +53,12 @@ const VoiceInput = ({ initialPlaceholder }) => {
         setOutputValue(message);
       };
 
-      recognition.start(); // Start listening when component mounts
+      setRecognition(recognitionInstance); // Set recognition instance to state
+
+      recognitionInstance.start(); // Start listening when component mounts
 
       return () => {
-        recognition.stop();
+        recognitionInstance.stop();
       };
     }
   }, [inputMode]); // Run effect when input mode changes
@@ -67,6 +70,16 @@ const VoiceInput = ({ initialPlaceholder }) => {
     setInputValue("");
     setOutputValue("");
     setPlaceholder(initialPlaceholder);
+
+    if (inputMode === "text") {
+      // Check if recognition is not already running before starting it
+      if (recognition && recognition.readyState !== "listening") {
+        recognition.start();
+      }
+    } else {
+      // Stop recognition if switching to text input mode
+      recognition.stop();
+    }
   };
 
   const handleKeyDown = (e) => {
@@ -132,23 +145,18 @@ const VoiceInput = ({ initialPlaceholder }) => {
   return (
     <div>
       <div>
-        {inputMode === "text" ? (
-          <div>
-            <div className="input-container">
-              <input
-                type="text"
-                placeholder={placeholder}
-                value={inputValue}
-                className="input-field"
-                onChange={(e) => setInputValue(e.target.value)}
-                onKeyDown={handleKeyDown}
-              />
-            </div>
-            <ResponseComponent response={outputValue} />
-          </div>
-        ) : (
-          <ResponseComponent response={outputValue} />
-        )}
+        <div className="input-container">
+          <input
+            type="text"
+            placeholder={placeholder}
+            value={inputValue}
+            className={`input-field ${inputMode === "voice" ? "voice-mode" : ""}`}
+            onChange={(e) => setInputValue(e.target.value)}
+            onKeyDown={handleKeyDown}
+            disabled={inputMode === "voice"} // Disable input field when in voice input mode
+          />
+        </div>
+        <ResponseComponent response={outputValue} />
       </div>
 
       <div className="keyboard-frame">
@@ -158,14 +166,14 @@ const VoiceInput = ({ initialPlaceholder }) => {
               className="mic-icon"
               alt="Solar keyboard bold"
               src={keyboardIcon}
-              onClick={handleMicClick}
+              onClick={() => setInputMode("voice")}
             />
           ) : (
             <img
               className="mic-icon"
               alt="Solar keyboard bold"
               src={MicIcon}
-              onClick={handleMicClick}
+              onClick={() => setInputMode("text")}
             />
           )}
         </div>
