@@ -19,8 +19,8 @@ const router = createBrowserRouter(
       <Route path="/voice" element={<Voice />} />
     </Route>,
   ),
-);
-
+)
+/* huuu */
 function App() {
   return <RouterProvider router={router} />;
 }
