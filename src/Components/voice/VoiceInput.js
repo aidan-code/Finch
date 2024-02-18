@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import ResponseComponent from "./responseComponent";
+import AccountCards from "./accountCards";
 import keyboardIcon from "../../Assets/keyboard.svg";
 import MicIcon from "../../Assets/Mic.svg";
 import "./voiceButton.css"; // Import CSS file if necessary
+import "./VoiceInput.css";
 import { useNavigate } from "react-router-dom"; // Import useNavigate from React Router
 
 const voiceflowApiKey = "VF.DM.659966b38e056e0007a70011.1dVnphfYAFKc04Dl"; // Replace with your actual Voiceflow API key
@@ -137,15 +139,18 @@ const VoiceInput = ({ initialPlaceholder }) => {
 
       // Update the output with Voiceflow's response
       setOutputValue(
+        response.data[1]?.payload?.message ||
+          response.data[2]?.payload?.message ||
+          "No response from Voiceflow",
+      );
+      setOutputValue(
         response.data[1]?.payload?.message || "No response from Voiceflow",
       );
-
-      // Use a timeout to speak out the second response, if available
-      setTimeout(() => {
-        setOutputValue(
-          response.data[2]?.payload?.message || "No response from Voiceflow",
-        );
-      }, 2000);
+      if (response.data[2]?.payload?.message) {
+        setTimeout(() => {
+          setOutputValue(response.data[2]?.payload?.message);
+        });
+      }
     } catch (error) {
       console.error(error);
     }
@@ -166,6 +171,10 @@ const VoiceInput = ({ initialPlaceholder }) => {
           />
         </div>
         <ResponseComponent response={outputValue} />
+        {outputValue ===
+        "Which account would you like to access? Savings or Checking?" ? (
+          <AccountCards />
+        ) : null}
       </div>
 
       <div className="keyboard-frame">
