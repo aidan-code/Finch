@@ -22,18 +22,16 @@ export const Transfer = () => {
   const [amount, setAmount] = useState("");
 
   const handleSend = () => {
-    console.log("Selected User:", selectedUser); // Log selectedUser
+    const parsedAmount = parseFloat(amount);
     if (!selectedUser) {
       alert("Please select a user.");
+    } else if (isNaN(parsedAmount) || parsedAmount <= 0) {
+      alert("Please enter a valid amount.");
     } else {
-      const parsedAmount = parseFloat(amount);
-      if (isNaN(parsedAmount) || parsedAmount <= 0) {
-        alert("Please enter a valid amount.");
-      } else {
-        console.log("Sending:", selectedUser, parsedAmount); // Log selectedUser and parsedAmount
-        // Navigate to the ApproveTransfer component with user and amount
-        navigate(`/approve-transfer/${selectedUser.name}/${parsedAmount}`);
-      }
+      // Navigate to the ApproveTransfer component with user and amount
+      navigate(`/approve-transfer/${selectedUser.name}/${parsedAmount}`, {
+        state: { user: selectedUser, amount: parsedAmount }, // Pass user and amount as state
+      });
     }
   };
 

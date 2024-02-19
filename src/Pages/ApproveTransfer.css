@@ -43,3 +43,11 @@
 .back-button:hover {
   background-color: #0056b3;
 }
+
+/* Add new styles for image container */
+.image-container {
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 50%;
+}
