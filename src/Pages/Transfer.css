@@ -1,0 +1,264 @@
+.transfer-incomplete {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.transfer-incomplete .div {
+  background-color: #ffffff;
+  height: 844px;
+  overflow: hidden;
+  position: relative;
+  width: 390px;
+}
+
+.transfer-incomplete .overlap-group {
+  height: 844px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 391px;
+}
+
+.transfer-incomplete .background {
+  height: 844px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 390px;
+}
+
+.transfer-incomplete .frame {
+  -webkit-backdrop-filter: blur(76.8px) brightness(100%);
+  backdrop-filter: blur(76.8px) brightness(100%);
+  background-color: #ffffff4f;
+  height: 638px;
+  left: 1px;
+  position: absolute;
+  top: 170px;
+  width: 390px;
+}
+
+.transfer-incomplete .frame-wrapper {
+  align-items: center;
+  display: inline-flex;
+  flex-direction: column;
+  gap: 28px;
+  left: 100px;
+  position: absolute;
+  top: 352px;
+}
+
+.transfer-incomplete .frame-2 {
+  align-items: flex-start;
+  display: inline-flex;
+  flex: 0 0 auto;
+  justify-content: center;
+  position: relative;
+}
+
+.transfer-incomplete .text-wrapper {
+  color: #272727;
+  font-family: "DM Sans-Bold", Helvetica;
+  font-size: 54px;
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: normal;
+  margin-top: -1px;
+  position: relative;
+  width: fit-content;
+}
+
+.transfer-incomplete .element {
+  color: transparent;
+  font-family: "DM Sans-Bold", Helvetica;
+  font-size: 54px;
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: normal;
+  margin-top: -1px;
+  position: relative;
+  width: fit-content;
+}
+
+.transfer-incomplete .span {
+  color: #272727;
+}
+
+.transfer-incomplete .text-wrapper-2 {
+  color: #626262;
+}
+
+.transfer-incomplete .frame-3 {
+  align-items: center;
+  display: inline-flex;
+  flex-direction: column;
+  left: 0;
+  position: absolute;
+  top: 200px;
+}
+
+.transfer-incomplete .frame-4 {
+  align-items: center;
+  display: inline-flex;
+  flex: 0 0 auto;
+  gap: 22px;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+}
+
+.transfer-incomplete .frame-5 {
+  align-items: center;
+  display: inline-flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 10px;
+  position: relative;
+}
+
+.transfer-incomplete .frame-6 {
+  align-items: center;
+  display: inline-flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 9px;
+  justify-content: center;
+  position: relative;
+}
+
+.transfer-incomplete .img {
+  height: 70px;
+  object-fit: cover;
+  position: relative;
+  width: 70px;
+}
+
+.transfer-incomplete .text-wrapper-3 {
+  color: #2a2a2a;
+  font-family: "DM Sans-Medium", Helvetica;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 17px;
+  position: relative;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.transfer-incomplete .rectangle {
+  align-self: stretch;
+  background-color: #f0f4f8;
+  border-radius: 7px;
+  height: 5px;
+  position: relative;
+  width: 100%;
+}
+
+.transfer-incomplete .rectangle-2 {
+  align-self: stretch;
+  background-color: #272727;
+  border-radius: 7px;
+  height: 5px;
+  position: relative;
+  width: 100%;
+}
+
+.transfer-incomplete .rectangle-3 {
+  background-color: #f0f4f8;
+  height: 5px;
+  margin-top: -15px;
+  position: relative;
+  width: 389px;
+  z-index: 0;
+}
+
+.transfer-incomplete .div-wrapper {
+  align-items: center;
+  background-color: #272727;
+  border-radius: 46px;
+  display: inline-flex;
+  gap: 10px;
+  justify-content: center;
+  left: 81px;
+  padding: 16px 95px;
+  position: absolute;
+  top: 480px;
+}
+
+.transfer-incomplete .text-wrapper-4 {
+  color: #ffffff;
+  font-family: "DM Sans-Medium", Helvetica;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: normal;
+  margin-top: -1px;
+  position: relative;
+  width: fit-content;
+}
+
+.transfer-incomplete .frame-7 {
+  -webkit-backdrop-filter: blur(32.5px) brightness(100%);
+  backdrop-filter: blur(32.5px) brightness(100%);
+  background-color: #ffffff9c;
+  height: 170px;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 390px;
+}
+
+.transfer-incomplete .text-wrapper-5 {
+  color: #272727;
+  font-family: "DM Sans-Medium", Helvetica;
+  font-size: 20px;
+  font-weight: 500;
+  left: 156px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 51px;
+}
+
+.transfer-incomplete .eva-arrow-back {
+  height: 24px;
+  left: 16px;
+  position: absolute;
+  top: 53px;
+  width: 24px;
+}
+
+.transfer-incomplete .frame-8 {
+  align-items: center;
+  border: 1px solid;
+  border-color: #ebebeb;
+  border-radius: 16.2px;
+  display: flex;
+  gap: 16.2px;
+  height: 48px;
+  left: 16px;
+  padding: 0px 0px 0px 16.2px;
+  position: absolute;
+  top: 99px;
+  width: 358px;
+}
+
+.transfer-incomplete .icons-instance {
+  height: 19.44px !important;
+  position: relative !important;
+  width: 19.44px !important;
+}
+
+.transfer-incomplete .text-wrapper-6 {
+  color: var(--neutral-400);
+  font-family: "DM Sans-Regular", Helvetica;
+  font-size: 17px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: normal;
+  position: relative;
+  width: fit-content;
+}

@@ -1,41 +1,22 @@
-.savings-account {
-  background-color: #fbfbfb;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  width: 100%;
-}
-
-.savings-account .div {
-  background-color: #fbfbfb;
-  height: 919px;
-  position: relative;
-  width: 390px;
-}
-
-.savings-account .frame {
+.savings-card {
   background-color: #202020;
   border: 1px solid;
   border-color: #ffffff;
   border-radius: 18px;
   height: 160px;
-  left: 16px;
   overflow: hidden;
-  position: absolute;
-  top: 92px;
   width: 358px;
 }
 
-.savings-account .overlap-group {
-  /* background-image: url(./topographic-1.png); */
+.savings-card .overlap-group {
   background-size: 100% 100%;
   height: 160px;
   position: relative;
 }
 
-.savings-account .text-wrapper {
+.savings-card .account-type {
   color: #ffffff;
-  font-family: "DM Sans-Medium", Helvetica;
+  font-family: "DM Sans", sans-serif;
   font-size: 14px;
   font-weight: 500;
   left: 14px;
@@ -45,9 +26,9 @@
   top: 15px;
 }
 
-.savings-account .text-wrapper-2 {
+.savings-card .balance {
   color: #ffffff;
-  font-family: "DM Sans-Medium", Helvetica;
+  font-family: "DM Sans", sans-serif;
   font-size: 34px;
   font-weight: 500;
   left: 14px;
@@ -57,52 +38,57 @@
   top: 92px;
 }
 
-.savings-account .text-wrapper-3 {
+.savings-card .text-wrapper {
   color: #909090;
-  font-family: "DM Sans-Medium", Helvetica;
-  font-size: 16px;
+  font-family: "DM Sans", sans-serif;
+  font-size: 12px;
   font-weight: 500;
   left: 14px;
   letter-spacing: 0;
   line-height: normal;
   position: absolute;
-  top: 69px;
+  top: 70px;
 }
 
-.savings-account .eva-arrow-back {
-  height: 24px;
-  left: 16px;
-  position: absolute;
-  top: 53px;
-  width: 24px;
-}
-
-.savings-account .frame-2 {
-  align-items: flex-start;
-  box-shadow:
-    -1px 12px 27px #0000001a,
-    -5px 48px 49px #00000017,
-    -10px 109px 66px #0000000d,
-    -19px 194px 78px #00000003,
-    -29px 303px 85px transparent;
+.savings-card .button {
+  all: unset;
+  align-items: center;
+  background-color: #ffffff;
+  border-radius: 46px;
+  box-sizing: border-box;
   display: inline-flex;
-  flex-direction: column;
-  gap: 31px;
-  left: 16px;
+  gap: 10px;
+  justify-content: center;
+  left: 260px;
+  padding: 10px;
   position: absolute;
-  top: 275px;
+  top: 95px;
 }
 
-.savings-account .frame-3 {
+.savings-card .button-text-wrapper {
+  all: unset;
+  box-sizing: border-box;
+  color: #272727;
+  font-family: "DM Sans", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: normal;
+  margin-top: -1px;
+  position: relative;
+  width: fit-content;
+}
+
+/* New component styles */
+.account-details {
   align-items: flex-start;
   display: inline-flex;
-  flex: 0 0 auto;
   flex-direction: column;
   gap: 16px;
   position: relative;
 }
 
-.savings-account .frame-4 {
+.account-details .acc-details-header {
   align-items: center;
   align-self: stretch;
   display: flex;
@@ -112,9 +98,9 @@
   width: 100%;
 }
 
-.savings-account .text-wrapper-4 {
+.account-details .text-wrapper {
   color: #3f3f3f;
-  font-family: "DM Sans-Bold", Helvetica;
+  font-family: "DM Sans", sans-serif;
   font-size: 16px;
   font-weight: 700;
   letter-spacing: 0;
@@ -124,7 +110,7 @@
   width: fit-content;
 }
 
-.savings-account .frame-5 {
+.account-details .copy-button {
   align-items: center;
   background-color: #272727;
   border-radius: 46px;
@@ -136,15 +122,15 @@
   position: relative;
 }
 
-.savings-account .img {
+.account-details .fluent-copy {
   height: 15px;
   position: relative;
   width: 15px;
 }
 
-.savings-account .text-wrapper-5 {
+.account-details .text-wrapper-2 {
   color: #ffffff;
-  font-family: "DM Sans-Medium", Helvetica;
+  font-family: "DM Sans", sans-serif;
   font-size: 12px;
   font-weight: 500;
   letter-spacing: 0;
@@ -154,7 +140,7 @@
   width: fit-content;
 }
 
-.savings-account .group {
+.account-details .group {
   -webkit-backdrop-filter: blur(99.6px) brightness(100%);
   backdrop-filter: blur(99.6px) brightness(100%);
   background-color: #ffffffc4;
@@ -164,7 +150,7 @@
   width: 358px;
 }
 
-.savings-account .frame-6 {
+.account-details .div-3 {
   align-items: flex-start;
   display: flex;
   flex-direction: column;
@@ -175,7 +161,7 @@
   width: 330px;
 }
 
-.savings-account .frame-7 {
+.account-details .div-4 {
   align-items: flex-start;
   display: flex;
   flex: 0 0 auto;
@@ -185,9 +171,9 @@
   width: 143px;
 }
 
-.savings-account .text-wrapper-6 {
+.account-details .text-wrapper-3 {
   color: #575757;
-  font-family: "DM Sans-Medium", Helvetica;
+  font-family: "DM Sans", sans-serif;
   font-size: 14px;
   font-weight: 500;
   letter-spacing: 0;
@@ -198,9 +184,9 @@
   width: fit-content;
 }
 
-.savings-account .text-wrapper-7 {
+.account-details .text-wrapper-4 {
   color: #2b2b2b;
-  font-family: "DM Sans-Medium", Helvetica;
+  font-family: "DM Sans", sans-serif;
   font-size: 16px;
   font-weight: 500;
   letter-spacing: 0;
@@ -210,9 +196,9 @@
   width: fit-content;
 }
 
-.savings-account .text {
+.account-details .text {
   color: #000000;
-  font-family: "Inter-Regular", Helvetica;
+  font-family: "DM Sans", sans-serif;
   font-size: 14px;
   font-weight: 400;
   letter-spacing: 0;
@@ -221,7 +207,7 @@
   width: fit-content;
 }
 
-.savings-account .frame-8 {
+.account-details .div-5 {
   align-items: flex-start;
   display: inline-flex;
   flex: 0 0 auto;
@@ -230,9 +216,9 @@
   position: relative;
 }
 
-.savings-account .text-2 {
+.account-details .text-2 {
   color: #000000;
-  font-family: "Inter-Regular", Helvetica;
+  font-family: "DM Sans", sans-serif;
   font-size: 14px;
   font-weight: 400;
   left: 12px;
@@ -242,7 +228,7 @@
   top: 3px;
 }
 
-.savings-account .frame-9 {
+.account-details .div-6 {
   align-items: flex-start;
   display: flex;
   flex: 0 0 auto;
@@ -252,9 +238,9 @@
   width: 330px;
 }
 
-.savings-account .p {
+.account-details .p {
   color: #2b2b2b;
-  font-family: "DM Sans-Medium", Helvetica;
+  font-family: "DM Sans", sans-serif;
   font-size: 16px;
   font-weight: 500;
   letter-spacing: 0;
@@ -263,89 +249,63 @@
   position: relative;
   width: 358px;
 }
-
-.savings-account .frame-10 {
+.card-div {
   align-items: flex-start;
   display: inline-flex;
-  flex: 0 0 auto;
   gap: 6px;
   position: relative;
 }
 
-.savings-account .cart-gradient {
-  background: linear-gradient(
-    180deg,
-    rgba(17, 17, 17, 0.2) 0%,
-    rgba(15.94, 15.94, 15.94, 0.2) 84.86%
-  );
-  /* background-image: url(./mask.png); */
-  background-size: 100% 100%;
-  border-radius: 7.33px;
-  height: 180.5px;
+.connected-cards {
+  align-items: flex-start;
+  display: inline-flex;
+  flex-direction: column;
+  gap: 16px;
   position: relative;
-  width: 115.45px;
 }
 
-.savings-account .logo {
-  height: 6px;
-  left: 10px;
-  position: absolute;
-  top: 20px;
-  width: 20px;
-}
-
-.savings-account .chip {
-  height: 14px;
-  left: 87px;
-  position: absolute;
-  top: 15px;
-  width: 19px;
-}
-
-.savings-account .cart-minimal {
-  background-color: var(--white);
-  /* background-image: url(./image.png); */
-  background-size: 100% 100%;
-  border-radius: 7.33px;
-  height: 180.5px;
+.connected-cards .acc-details-header {
+  align-items: center;
+  align-self: stretch;
+  display: flex;
+  flex: 0 0 auto;
+  justify-content: space-between;
   position: relative;
-  width: 115.45px;
+  width: 100%;
 }
 
-.savings-account .logo-2 {
-  height: 6px;
-  left: 10px;
-  position: absolute;
-  top: 17px;
-  width: 20px;
-}
-
-.savings-account .chip-2 {
-  height: 14px;
-  left: 87px;
-  position: absolute;
-  top: 12px;
-  width: 19px;
-}
-
-.savings-account .cart-holograma {
-  background: linear-gradient(
-    180deg,
-    rgba(46.67, 42.85, 233.75, 0.2) 0%,
-    rgba(63.75, 82.88, 255, 0.2) 84.86%
-  );
-  /* background-image: url(./mask-group.png); */
-  background-size: 100% 100%;
-  border-radius: 7.33px;
-  height: 180.5px;
+.connected-cards .text-wrapper {
+  color: #3f3f3f;
+  font-family: "DM Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: 24px;
   position: relative;
-  width: 115.45px;
+  white-space: nowrap;
+  width: fit-content;
 }
 
-.savings-account .logo-3 {
-  height: 6px;
-  left: 85px;
-  position: absolute;
-  top: 160px;
-  width: 20px;
+.connected-cards .text-wrapper-2 {
+  color: #ffffff;
+  font-family: "DM Sans", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: normal;
+  margin-top: -1px;
+  position: relative;
+  width: fit-content;
+}
+
+.connected-cards .copy-button {
+  align-items: center;
+  background-color: #272727;
+  border-radius: 46px;
+  display: inline-flex;
+  flex: 0 0 auto;
+  gap: 4px;
+  justify-content: center;
+  padding: 10px;
+  position: relative;
 }
