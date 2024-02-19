@@ -43,22 +43,14 @@
 
 // export default Tabs;
 
-import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import React from "react";
 import "./transfertabs.css";
 
-const Tab = ({ items }) => {
-  const navigate = useNavigate();
-  const [selectedTabIndex, setSelectedTabIndex] = useState(0);
-  const [amount, setAmount] = useState("");
-
+const Tabs = ({ items, onSelect }) => {
   const handleTabClick = (index) => {
-    setSelectedTabIndex(index);
-  };
-
-  const handleSendClick = () => {
-    const selectedUser = items[selectedTabIndex];
-    navigate(`/user-details/${selectedUser.name}/${amount}`);
+    if (onSelect) {
+      onSelect(items[index]); // Pass the selected user object to the onSelect function
+    }
   };
 
   return (
@@ -67,29 +59,16 @@ const Tab = ({ items }) => {
         {items.map((item, index) => (
           <div
             key={index}
-            className={`tab ${index === selectedTabIndex ? "selected" : ""}`}
+            className="tab"
             onClick={() => handleTabClick(index)}
           >
             <img src={item.imageUrl} alt={item.name} className="tab-image" />
             <p className="tab-name">{item.name}</p>
-            {index === selectedTabIndex && <div className="selected-line" />}
           </div>
         ))}
-      </div>
-      <div className="send-container">
-        <input
-          type="number"
-          className="amount-input"
-          placeholder="Enter amount"
-          value={amount}
-          onChange={(e) => setAmount(e.target.value)}
-        />
-        <button className="send-button" onClick={handleSendClick}>
-          Send
-        </button>
       </div>
     </div>
   );
 };
 
-export default Tab;
+export default Tabs;

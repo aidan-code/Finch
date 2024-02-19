@@ -1,0 +1,45 @@
+/* ApproveTransfer.css */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.user-details {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.user-details h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.user-details img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.user-details p {
+  font-size: 18px;
+  color: #333;
+}
+
+.back-button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+  background-color: #0056b3;
+}
