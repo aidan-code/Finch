@@ -1,6 +1,7 @@
 import React from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import "./ApproveTransfer.css";
+import vectorDesign from "../Assets/vectordesign.svg";
 
 const ApproveTransfer = () => {
   const navigate = useNavigate();
@@ -27,6 +28,22 @@ const ApproveTransfer = () => {
           </>
         )}
       </div>
+      <div className="payment-card">
+        <div className="overlap-group">
+          <img
+            className="design-vector"
+            alt="Design vector"
+            src={vectorDesign}
+          />
+          <div className="message">Paying with</div>
+          <div className="account-balance">$15,400.86</div>
+          <div className="account-type">Checking account</div>
+          <button className="change-button">
+            <button className="button-text-wrapper">Change</button>
+          </button>
+        </div>
+      </div>
+
       <button className="back-button" onClick={handleBack}>
         Back
       </button>
