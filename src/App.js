@@ -11,6 +11,7 @@ import HomePage from "./Pages/Homepage";
 import Voice from "./Pages/Voice";
 import Savings from "./Pages/Savings";
 import Transfer from "./Pages/Transfer";
+import ConfirmTransfer from "./Pages/ConfirmTransfer";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -19,6 +20,7 @@ const router = createBrowserRouter(
       <Route path="/savings" element={<Savings />} />
       <Route path="/voice" element={<Voice />} />
       <Route path="/transfer" element={<Transfer />} />
+      <Route path="/confirm-transfer" element={<ConfirmTransfer />} />
     </Route>,
   ),
 );
