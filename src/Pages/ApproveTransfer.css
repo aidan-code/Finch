@@ -41,7 +41,7 @@
   color: #333;
 }
 
-.back-button {
+/* .back-button {
   background-color: #007bff;
   color: #fff;
   border: none;
@@ -49,7 +49,7 @@
   padding: 10px 20px;
   cursor: pointer;
   transition: background-color 0.3s ease;
-}
+} */
 
 .back-button:hover {
   background-color: #0056b3;
@@ -163,4 +163,30 @@
   margin-top: -1px;
   position: relative;
   width: fit-content;
+}
+
+.back-button {
+  background-color: green; /* Default green color */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  animation: slideToGrey 3s linear 2s forwards; /* Animation to slide to grey after 2 seconds */
+}
+
+@keyframes slideToGrey {
+  0% {
+    background-color: green; /* Starting color */
+    background-size: 200% 100%;
+    background-position: left bottom;
+  }
+  100% {
+    background-color: grey; /* Final color */
+    background-position: right bottom;
+  }
+}
+
+.back-button:hover {
+  background-color: red; /* Change color on hover */
 }
