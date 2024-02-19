@@ -19,8 +19,11 @@ const ApproveTransfer = () => {
         </div>
         {user && (
           <>
-            <h2>{user.name}</h2>
-            <p>Amount: ${amount}</p>
+            <div className="text-wrapper">{user.name}</div>
+
+            <div className="label">
+              <div className="amount-wrapper">${amount}</div>
+            </div>
           </>
         )}
       </div>
