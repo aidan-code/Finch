@@ -12,6 +12,7 @@ import Voice from "./Pages/Voice";
 import Savings from "./Pages/Savings";
 import Transfer from "./Pages/Transfer";
 import ApproveTransfer from "./Pages/ApproveTransfer";
+import TransferHistory from "./Pages/TransferHistory";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -24,6 +25,7 @@ const router = createBrowserRouter(
         path="/approve-transfer/:user/:amount"
         element={<ApproveTransfer />}
       />
+      <Route path="/transfer-history" element={<TransferHistory />} />
     </Route>,
   ),
 );

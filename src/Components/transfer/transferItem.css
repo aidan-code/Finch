@@ -1,0 +1,155 @@
+.transfer-wrapper {
+  align-items: flex-start;
+  display: inline-flex;
+  flex-direction: column;
+  gap: 10px;
+  position: relative;
+}
+
+.transfer-wrapper .overlay-group {
+  align-items: flex-start;
+  align-self: stretch;
+  display: flex;
+  flex: 0 0 auto;
+  justify-content: space-between;
+  position: relative;
+  width: 100%;
+}
+
+.transfer-wrapper .text-wrapper {
+  color: var(--neutral-800);
+  font-family: "DM Sans-Medium", Helvetica;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: normal;
+  margin-top: -1px;
+  position: relative;
+  width: fit-content;
+}
+
+.transfer-wrapper .transfers {
+  align-items: flex-start;
+  background-color: #ffffff;
+  border-radius: 9px;
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 14px;
+  padding: 18px 16px;
+  position: relative;
+  width: 358px;
+}
+
+.transfer-wrapper .div {
+  height: 65px;
+  margin-right: -2px;
+  position: relative;
+  width: 328px;
+}
+
+.transfer-wrapper .transfer-amount {
+  color: var(--neutral-800);
+  font-family: "DM Sans-Medium", Helvetica;
+  font-size: 14px;
+  font-weight: 500;
+  left: 265px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: right;
+  top: 20px;
+}
+
+.transfer-wrapper .frame {
+  align-items: flex-start;
+  display: inline-flex;
+  gap: 13px;
+  left: 0;
+  position: absolute;
+  top: 0;
+}
+
+.transfer-wrapper .user-img-container {
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 40px;
+  position: relative;
+  width: 40px;
+}
+
+.transfer-wrapper .frame-2 {
+  align-items: flex-start;
+  display: inline-flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 5px;
+  position: relative;
+}
+
+.transfer-wrapper .text-wrapper-2 {
+  color: var(--neutral-700);
+  font-family: "DM Sans-Medium", Helvetica;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: normal;
+  margin-top: -1px;
+  position: relative;
+  width: fit-content;
+}
+
+.transfer-wrapper .text-wrapper-3 {
+  color: var(--neutral-600);
+  font-family: "DM Sans-Regular", Helvetica;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: normal;
+  position: relative;
+  width: fit-content;
+}
+
+.transfer-wrapper .text-wrapper-4 {
+  color: #909090;
+  font-family: "DM Sans-Medium", Helvetica;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: normal;
+  position: relative;
+  width: fit-content;
+}
+
+.transfer-wrapper .text-wrapper-5 {
+  color: var(--neutral-800);
+  font-family: "DM Sans-Medium", Helvetica;
+  font-size: 14px;
+  font-weight: 500;
+  left: 262px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: right;
+  top: 20px;
+}
+
+.transfer-wrapper .img {
+  height: 40px;
+  object-fit: cover;
+  position: relative;
+  width: 40px;
+}
+
+.transfer-wrapper .text-wrapper-6 {
+  color: var(--neutral-800);
+  font-family: "DM Sans-Medium", Helvetica;
+  font-size: 14px;
+  font-weight: 500;
+  left: 261px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: right;
+  top: 20px;
+}
