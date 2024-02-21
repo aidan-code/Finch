@@ -11,9 +11,11 @@ const TransferItem = ({
   description,
 }) => {
   return (
-    <div className="transfer-item">
-      <div className="date-wrapper">{date}</div>
-      <div className="total-amount-wrapper">{totalAmount}</div>
+    <div className="transfer-wrapper">
+      <div className="overlay-group">
+        <div className="date-wrapper">{date}</div>
+        <div className="total-amount-wrapper">{totalAmount}</div>
+      </div>
       <div className="transfers">
         <div className="transfer">
           <div className="transfer-amount">{transferAmount}</div>
