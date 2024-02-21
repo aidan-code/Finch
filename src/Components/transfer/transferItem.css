@@ -1,35 +1,28 @@
 .daily-transfer-wrapper {
   display: flex;
+  align-items: center;
+  justify-content: center;
   flex-direction: column;
-  align-items: flex-start;
   padding: 0px;
   gap: 10px;
   position: relative;
-  width: 358px;
-  height: 290px;
-  left: 16px;
   top: 237px;
   margin-bottom: 20px;
+  width: 100 %; /* Fill the screen from left to right */
+  margin-left: 5%;
+  margin-right: 5%;
 }
-
 .transfer-header {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
   align-items: flex-start;
   padding: 0px;
-  gap: 190px;
-  width: 358px;
-  height: 21px;
-  flex: none;
-  order: 0;
-  align-self: stretch;
-  flex-grow: 0;
+  width: 100%; /* Make sure it stretches horizontally */
+  justify-content: space-between; /* Fill the space between elements */
 }
 
 .date-wrapper {
-  margin: 0 auto;
-  width: 100%;
+  width: 122px;
   height: 21px;
   font-family: "DM Sans";
   font-style: normal;
@@ -43,7 +36,6 @@
 }
 
 .total-amount-wrapper {
-  margin: 0 auto;
   width: 75px;
   height: 21px;
   font-family: "DM Sans";
@@ -63,8 +55,7 @@
   align-items: flex-start;
   padding: 18px 16px;
   gap: 14px;
-  width: 358px;
-
+  width: 100%; /* Set width to 100% */
   background: #ffffff;
   border-radius: 9px;
   flex: none;

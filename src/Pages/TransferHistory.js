@@ -9,6 +9,7 @@ import Sam from "../Assets/revolut.jpg";
 import James from "../Assets/wise.jpg";
 import Elvis from "../Assets/finch.jpg";
 import Josephine from "../Assets/zelle.jpg";
+import AssistantLogo from "../Components/text/assistantLogo";
 
 const items = [
   { name: "Sam", imageUrl: Sam },
@@ -21,50 +22,49 @@ const items = [
 export const TransferHistory = () => {
   return (
     <div className="transfer-history">
-      <div className="transfer-home">
-        {/* Include TransferItem component with dynamic props */}
-        <TransferItem
-          date="Feb 13, 2024"
-          totalAmount="-$600.00"
-          transferAmount="-$150.00"
-          imgSrc={James}
-          username="James Barden"
-          description="Thanks for the ride"
-          time="4:05 PM"
-          transferAmount2="-$150.00"
-          imgSrc2={James}
-          username2="James Barden"
-          description2="Thanks for the ride"
-          time2="4:05 PM"
-          transferAmount3="-$150.00"
-          imgSrc3={James}
-          username3="James Barden"
-          description3="Thanks for the ride"
-          time3="4:05 PM"
-        />
-        <div>
-          <TransferItem
-            date="Feb 14, 2024"
-            totalAmount="-$600.00"
-            transferAmount="-$150.00"
-            imgSrc={James}
-            username="James Barden"
-            description="Thanks for the ride"
-            time="4:05 PM"
-            transferAmount2="-$150.00"
-            imgSrc2={James}
-            username2="James Barden"
-            description2="Thanks for the ride"
-            time2="4:05 PM"
-            transferAmount3="-$150.00"
-            imgSrc3={James}
-            username3="James Barden"
-            description3="Thanks for the ride"
-            time3="4:05 PM"
-          />
-        </div>
-        {/* Add more TransferItem components with different props as needed */}
-      </div>
+      <AssistantLogo />
+      {/* Include TransferItem component with dynamic props */}
+      <TransferItem
+        date="Feb 13, 2024"
+        totalAmount="-$600.00"
+        transferAmount="-$150.00"
+        imgSrc={James}
+        username="James Barden"
+        description="Thanks for the ride"
+        time="4:05 PM"
+        transferAmount2="-$150.00"
+        imgSrc2={James}
+        username2="James Barden"
+        description2="Thanks for the ride"
+        time2="4:05 PM"
+        transferAmount3="-$150.00"
+        imgSrc3={James}
+        username3="James Barden"
+        description3="Thanks for the ride"
+        time3="4:05 PM"
+      />
+
+      <TransferItem
+        date="Feb 11, 2024"
+        totalAmount="-$600.00"
+        transferAmount="-$150.00"
+        imgSrc={James}
+        username="James Barden"
+        description="Thanks for the ride"
+        time="4:05 PM"
+        transferAmount2="-$150.00"
+        imgSrc2={James}
+        username2="James Barden"
+        description2="Thanks for the ride"
+        time2="4:05 PM"
+        transferAmount3="-$150.00"
+        imgSrc3={James}
+        username3="James Barden"
+        description3="Thanks for the ride"
+        time3="4:05 PM"
+      />
+
+      {/* Add more TransferItem components with different props as needed */}
     </div>
   );
 };
