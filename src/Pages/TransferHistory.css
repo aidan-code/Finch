@@ -1,0 +1,8 @@
+.transfer-history {
+  position: relative;
+  width: 100%;
+  height: 1043px;
+
+  background: #fcfcfc;
+  backdrop-filter: blur(31.35px);
+}
