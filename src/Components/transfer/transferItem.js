@@ -12,8 +12,10 @@ const TransferItem = ({
 }) => {
   return (
     <div className="transfer-item">
-      <div className="date-wrapper">{date}</div>
-      <div className="total-amount-wrapper">{totalAmount}</div>
+      <div class="transfer-header">
+        <div className="date-wrapper">{date}</div>
+        <div className="total-amount-wrapper">{totalAmount}</div>
+      </div>
       <div className="transfers">
         <div className="transfer">
           <div className="transfer-amount">{transferAmount}</div>
