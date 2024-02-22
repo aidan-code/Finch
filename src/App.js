@@ -13,6 +13,7 @@ import Savings from "./Pages/Savings";
 import Transfer from "./Pages/Transfer";
 import ApproveTransfer from "./Pages/ApproveTransfer";
 import TransferHistory from "./Pages/TransferHistory";
+import GroceryHistory from "./Pages/GroceryHistory";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -26,6 +27,7 @@ const router = createBrowserRouter(
         element={<ApproveTransfer />}
       />
       <Route path="/transfer-history" element={<TransferHistory />} />
+      <Route path="/grocery-history" element={<GroceryHistory />} />
     </Route>,
   ),
 );
