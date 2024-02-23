@@ -1,0 +1,120 @@
+.menu {
+  box-sizing: border-box;
+  position: absolute;
+  width: 390px;
+  height: 226px;
+  left: 0px;
+  top: 620px;
+  background: rgba(248, 248, 248, 0.88);
+  border: 1px solid #dcdcdc;
+  backdrop-filter: blur(20px);
+  border-radius: 36px 36px 0px 0px;
+}
+
+.header {
+  position: absolute;
+  width: 105px;
+  height: 21px;
+  left: 16px;
+  top: 29px;
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 21px;
+  color: #383838;
+}
+
+.more {
+  box-sizing: border-box;
+  position: absolute;
+  width: 27px;
+  height: 27px;
+  left: 337px;
+  top: 21px;
+  border: 1px solid #717171;
+  border-radius: 21px;
+}
+
+.button-group {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 11px;
+
+  position: absolute;
+  width: 345px;
+  height: 41px;
+  left: 16px;
+  top: 68px;
+  overflow-x: scroll;
+}
+
+.button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 19px;
+  gap: 10px;
+  width: 100px;
+  height: 41px;
+  background: #0075ff;
+  border-radius: 51px;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.text-field {
+  position: absolute;
+  width: 358px;
+  height: 56px;
+  left: calc(50% - 358px / 2);
+  top: 134px;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 24px;
+  position: absolute;
+  width: 169px;
+  height: 21px;
+  left: 15px;
+  top: 17px;
+}
+
+.go-button {
+  /* go-button */
+
+  /* Auto layout */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 11px 25px;
+  gap: 10px;
+
+  position: absolute;
+  width: 73px;
+  height: 43px;
+  left: calc(50% - 73px / 2 + 133.5px);
+  top: calc(50% - 43px / 2 - 0.5px);
+  background: #0075ff;
+  border-radius: 12px;
+  width: 23px;
+  height: 21px;
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 21px;
+  color: #ffffff;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
