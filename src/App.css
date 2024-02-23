@@ -5,8 +5,9 @@
 
   .App {
     text-align: center;
+    background-color: #282c34;
     margin: 30px auto; /* Center the content horizontally */
-    max-width: 100%; /* Ensure the content spans not more than 500px */
+    max-width: none; /* Ensure the content spans not more than 500px */
   }
 
   .App-logo {

@@ -20,6 +20,7 @@ export const RecentTransferCard = () => {
                 <div className="text-wrapper-3">$200</div>
               </div>
             </div>
+
             <div className="div">
               <img className="img" alt="Zelle" src={zelleImage} />
               <div className="frame-2">

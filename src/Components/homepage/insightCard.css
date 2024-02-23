@@ -5,6 +5,7 @@
   justify-content: center;
   width: 100%;
   padding: 0px 5px;
+  overflow: hidden;
 }
 
 .insight .overlap-group-wrapper {
