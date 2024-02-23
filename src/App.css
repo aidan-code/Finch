@@ -1,11 +1,12 @@
-@media screen and (max-width: 820px) {
+@media screen and (max-width: 390px) {
   * {
     box-sizing: border-box;
   }
 
   .App {
     text-align: center;
-    margin: 30px;
+    margin: 30px auto; /* Center the content horizontally */
+    max-width: 100%; /* Ensure the content spans not more than 500px */
   }
 
   .App-logo {

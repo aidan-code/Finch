@@ -7,7 +7,16 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    "geometric sans-serif", monospace;
+/* Adjustments for better readability and spacing */
+@media screen and (max-width: 820px) {
+  body {
+    font-size: 16px; /* Adjust font size for smaller screens */
+  }
+}
+
+/* Additional styles for larger screens such as iPad Pro */
+@media screen and (min-width: 1024px) {
+  body {
+    font-size: 18px; /* Adjust font size for larger screens */
+  }
 }

@@ -1,120 +1,140 @@
 .menu {
-  box-sizing: border-box;
-  position: absolute;
-  width: 390px;
-  height: 226px;
-  left: 0px;
-  top: 620px;
-  background: rgba(248, 248, 248, 0.88);
-  border: 1px solid #dcdcdc;
-  backdrop-filter: blur(20px);
+  align-items: flex-start;
+  background-color: #f8f8f8e0;
+  border: 1px solid;
+  border-color: #dbdbdb;
   border-radius: 36px 36px 0px 0px;
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+  padding: 21px 16px;
+  position: relative;
 }
 
-.header {
-  position: absolute;
-  width: 105px;
-  height: 21px;
-  left: 16px;
-  top: 29px;
-  font-family: "DM Sans";
-  font-style: normal;
+.menu .header {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  width: 348px;
+}
+
+.menu .header-text {
+  color: var(--neutral-700);
+  font-family: "DM Sans", sans-serif;
+  font-size: 16px;
   font-weight: 500;
-  font-size: 16px;
-  line-height: 21px;
-  color: #383838;
+  letter-spacing: 0;
+  line-height: normal;
+  position: relative;
+  width: 158px;
 }
 
-.more {
-  box-sizing: border-box;
-  position: absolute;
-  width: 27px;
+.menu .more {
   height: 27px;
-  left: 337px;
-  top: 21px;
-  border: 1px solid #717171;
-  border-radius: 21px;
+  position: relative;
+  width: 27px;
 }
 
-.button-group {
-  display: flex;
-  flex-direction: row;
+.menu .button-group {
   align-items: flex-start;
-  padding: 0px;
+  display: flex;
   gap: 11px;
-
-  position: absolute;
-  width: 345px;
-  height: 41px;
-  left: 16px;
-  top: 68px;
   overflow-x: scroll;
+  position: relative;
+  width: 80%;
 }
 
-.button {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
+.menu .button {
   align-items: center;
-  padding: 10px 19px;
-  gap: 10px;
-  width: 100px;
-  height: 41px;
-  background: #0075ff;
+  background-color: #0075ff;
   border-radius: 51px;
-  flex: none;
-  order: 0;
-  flex-grow: 0;
-}
-
-.text-field {
-  position: absolute;
-  width: 358px;
-  height: 56px;
-  left: calc(50% - 358px / 2);
-  top: 134px;
-}
-
-.text {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  padding: 0px;
-  gap: 24px;
-  position: absolute;
-  width: 169px;
-  height: 21px;
-  left: 15px;
-  top: 17px;
-}
-
-.go-button {
-  /* go-button */
-
-  /* Auto layout */
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  padding: 11px 25px;
+  display: inline-flex;
+  flex: 0 0 auto;
   gap: 10px;
+  justify-content: center;
+  padding: 10px 19px;
+  position: relative;
+}
 
-  position: absolute;
-  width: 73px;
-  height: 43px;
-  left: calc(50% - 73px / 2 + 133.5px);
-  top: calc(50% - 43px / 2 - 0.5px);
-  background: #0075ff;
-  border-radius: 12px;
-  width: 23px;
-  height: 21px;
-  font-family: "DM Sans";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 21px;
+.menu .button-text {
   color: #ffffff;
-  flex: none;
-  order: 0;
-  flex-grow: 0;
+  font-family: "DM Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: normal;
+  margin-top: -1px;
+  position: relative;
+  width: fit-content;
+}
+
+.menu .button-text-wrapper {
+  align-items: center;
+  background-color: #0075ff;
+  border-radius: 51px;
+  display: inline-flex;
+  flex: 0 0 auto;
+  gap: 10px;
+  justify-content: center;
+  padding: 10px 19px;
+  position: relative;
+}
+
+.menu .text-field {
+  align-items: center;
+  border: 0.4px solid;
+  border-color: #615d63;
+  border-radius: 12px;
+  display: inline-flex;
+  flex: 0 0 auto;
+  gap: 88px;
+  padding: 6px 14px;
+  position: relative;
+  width: 80%;
+}
+
+.menu .text-placeholder {
+  align-items: flex-start;
+  display: inline-flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 24px;
+  position: relative;
+}
+
+.menu .text-wrapper {
+  color: #929292;
+  font-family: "DM Sans-Medium", Helvetica;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: normal;
+  margin-top: -1px;
+  position: relative;
+  width: fit-content;
+}
+
+.menu .go-button {
+  align-items: center;
+  background-color: #0075ff;
+  border-radius: 12px;
+  display: inline-flex;
+  flex: 0 0 auto;
+  gap: 10px;
+  justify-content: center;
+  padding: 11px 25px;
+  position: relative;
+}
+
+.menu .go-button-text {
+  color: #ffffff;
+  font-family: "DM Sans-Bold", Helvetica;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: normal;
+  margin-top: -1px;
+  position: relative;
+  width: fit-content;
 }

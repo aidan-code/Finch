@@ -4,6 +4,7 @@
   flex-direction: row;
   justify-content: center;
   width: 100%;
+  padding: 0px 5px;
 }
 
 .insight .overlap-group-wrapper {
