@@ -149,7 +149,7 @@ const VoiceInput = ({ initialPlaceholder }) => {
       if (response.data[2]?.payload?.message) {
         setTimeout(() => {
           setOutputValue(response.data[2]?.payload?.message);
-        });
+        }, 5000);
       }
     } catch (error) {
       console.error(error);
@@ -183,14 +183,14 @@ const VoiceInput = ({ initialPlaceholder }) => {
             <img
               className="mic-icon"
               alt="Solar keyboard bold"
-              src={keyboardIcon}
+              src={MicIcon}
               onClick={() => setInputMode("voice")}
             />
           ) : (
             <img
               className="mic-icon"
               alt="Solar keyboard bold"
-              src={MicIcon}
+              src={keyboardIcon}
               onClick={() => setInputMode("text")}
             />
           )}

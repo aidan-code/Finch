@@ -6,28 +6,21 @@ import BalanceOverviewBG from "../../Assets/background.svg";
 export const BalanceOverview = () => {
   return (
     <div className="balance-overview">
-      <img className="background" alt="Background" src={BalanceOverviewBG} />
-      <div className="div">
-        <div className="div-2">
-          <div className="div-3">
-            <div className="text-wrapper">Savings</div>
-            <div className="ellipse" />
-            <div className="text-wrapper">5567</div>
-          </div>
-          <div className="div-4">
-            <div className="dollars">$15,400</div>
-            <div className="cents">86</div>
-          </div>
-        </div>
-        <div className="account-dropdown">
-          <div className="text-wrapper-2">Accounts</div>
-          <img
-            className="caretup-icon"
-            alt="Caretup icon"
-            src={BalanceOverviewIcon}
-          />
-        </div>
+      <div className="save">
+        <p>Savings</p>
+        <div className="elipse" />
+        <p>5567</p>
       </div>
+
+      <div className="bal-disp">
+        <span className="bal">$15,400</span>
+        <span className="to-p">86</span>
+      </div>
+
+      <button className="btn-A">
+        Accounts
+        <img src={BalanceOverviewIcon} alt="icon" />
+      </button>
     </div>
   );
 };

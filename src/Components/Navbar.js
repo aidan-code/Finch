@@ -7,7 +7,7 @@ import user from "../Assets/Ellipse.jpg";
 const Navbar = () => {
   const [Notification, setNotification] = useState(6);
   return (
-    <div className="container">
+    <div className="containment">
       <div className="navbar">
         <div className="nav">
           <img src={logo} alt="logo" />

@@ -7,16 +7,19 @@ import InsightCard from "../Components/homepage/insightCard";
 import BalanceOverview from "../Components/homepage/balanceOverview";
 import Menu from "../Components/homepage/menu";
 
+
 const HomePage = () => {
   return (
     <div className="home-wrapper">
       <Navbar />
-      <Hero />
-      <RecentTransferCard />
-      <OrderCard />
-      <InsightCard />
-      <BalanceOverview />
-      <Menu />
+        <BalanceOverview />
+        <div className="sect">
+        <Hero />
+        <RecentTransferCard />
+        <OrderCard />
+        <InsightCard />
+        <Menu />
+      </div>
     </div>
   );
 };
