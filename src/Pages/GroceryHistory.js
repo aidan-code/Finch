@@ -7,7 +7,7 @@ import WFM from "../Assets/wfm.svg";
 import Walmart from "../Assets/walmart.svg";
 import ALDI from "../Assets/aldi.svg";
 import Eleven from "../Assets/7eleven.svg";
-import AssistantLogo from "../Components/text/assistantLogo";
+import AssistantLogo from "../Components/voice/assistantLogo";
 import "./GroceryHistory.css";
 
 export const GroceryHistory = () => {

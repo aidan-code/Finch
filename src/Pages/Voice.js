@@ -8,10 +8,12 @@ import "./Voice.css";
 const Voice = () => {
   return (
     <div className="Voice">
-      <VoiceInput />
       <AssistantLogo />
+      <div className="resp-input">
+        <ResponseComponent />
+        <VoiceInput />
+      </div>
       {/* <Mic /> */}
-      <ResponseComponent />
     </div>
   );
 };

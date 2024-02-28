@@ -4,9 +4,11 @@ import AssistantLogoIcon from "../../Assets/AssistantLogo.svg";
 
 export const AssistantLogo = () => {
   return (
-    <div className="assistant-frame">
-      <img className="group" alt="Group" src={AssistantLogoIcon} />
-      <div className="text-wrapper">Assistant</div>
+    <div className="aslw">
+      <div className="assistant-frame">
+        <img className="group" alt="Group" src={AssistantLogoIcon} />
+        <div className="text-wrapper">Assistant</div>
+      </div>
     </div>
   );
 };

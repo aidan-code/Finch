@@ -7,7 +7,7 @@ import Sam from "../Assets/revolut.jpg";
 import James from "../Assets/wise.jpg";
 import Elvis from "../Assets/finch.jpg";
 import Josephine from "../Assets/zelle.jpg";
-import AssistantLogo from "../Components/text/assistantLogo";
+import AssistantLogo from "../Components/voice/assistantLogo";
 
 export const TransferHistory = () => {
   return (

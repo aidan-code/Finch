@@ -6,11 +6,4 @@
   align-items: center;
   padding: 10px;
   gap: 10px;
-
-  position: absolute;
-  width: 388px;
-  height: 41px;
-  left: 1px;
-  top: 111px;
-  font-family: "DM Sans", sans-serif;
 }

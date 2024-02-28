@@ -4,7 +4,6 @@ import ResponseComponent from "./responseComponent";
 import AccountCards from "./accountCards";
 import keyboardIcon from "../../Assets/keyboard.svg";
 import MicIcon from "../../Assets/Mic.svg";
-import "./voiceButton.css"; // Import CSS file if necessary
 import "./VoiceInput.css";
 import { useNavigate } from "react-router-dom"; // Import useNavigate from React Router
 
@@ -158,7 +157,7 @@ const VoiceInput = ({ initialPlaceholder }) => {
 
   return (
     <div>
-      <div>
+      <div className="response-cont">
         <ResponseComponent response={outputValue} />
         {outputValue ===
         "Which account would you like to access? Savings or Checking?" ? (
@@ -168,32 +167,31 @@ const VoiceInput = ({ initialPlaceholder }) => {
       <div className="input-container">
         <input
           type="text"
-          placeholder={placeholder}
+          placeholder="I want to make a transfer"
           value={inputValue}
           className={`input-field ${inputMode === "voice" ? "voice-mode" : ""}`}
           onChange={(e) => setInputValue(e.target.value)}
           onKeyDown={handleKeyDown}
           disabled={inputMode === "voice"} // Disable input field when in voice input mode
         />
-      </div>
-
-      <div className="keyboard-frame">
-        <div className="keyboard">
-          {inputMode === "text" ? (
-            <img
-              className="mic-icon"
-              alt="Solar keyboard bold"
-              src={MicIcon}
-              onClick={() => setInputMode("voice")}
-            />
-          ) : (
-            <img
-              className="mic-icon"
-              alt="Solar keyboard bold"
-              src={keyboardIcon}
-              onClick={() => setInputMode("text")}
-            />
-          )}
+        <div className="keyboard-frame">
+          <div className="keyboard">
+            {inputMode === "text" ? (
+              <img
+                className="mic-icon"
+                alt="Solar keyboard bold"
+                src={MicIcon}
+                onClick={() => setInputMode("voice")}
+              />
+            ) : (
+              <img
+                className="mic-icon"
+                alt="Solar keyboard bold"
+                src={keyboardIcon}
+                onClick={() => setInputMode("text")}
+              />
+            )}
+          </div>
         </div>
       </div>
     </div>
