@@ -1,140 +1,55 @@
-.menu {
-  align-items: center;
+.Quick {
+  border-radius: 20px 50px 0px 0px;
   background-color: #f8f8f8e0;
-  border: 1px solid;
-  border-color: #dbdbdb;
-  border-radius: 36px 36px 0px 0px;
+  padding: 20px;
+  margin-top: 20px;
+}
+.hding {
   display: flex;
-  flex-wrap: wrap;
-  overflow: hidden;
-  padding: 21px 16px;
-  position: relative;
+  align-items: center;
+  justify-content: space-between;
+}
+.btn-ss {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px 0px;
 }
 
-.menu .header {
-  align-items: center;
+.btn-ss button {
+  background-color: #0075ff;
+  color: white;
+  font-weight: 500;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+.finel {
+  border: 1px solid #615d63;
   display: flex;
   justify-content: space-between;
-  position: relative;
-  width: 348px;
+  padding: 5px;
+  border-radius: 10px;
 }
 
-.menu .header-text {
-  color: var(--neutral-700);
-  font-family: "DM Sans", sans-serif;
-  font-size: 16px;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: normal;
-  position: relative;
-  width: 158px;
+.finel input {
+  width: 100%;
+  border: none;
+  padding: 5px;
+  border: none;
+  outline: none;
+  background-color: transparent;
 }
 
-.menu .more {
-  height: 27px;
-  position: relative;
-  width: 27px;
-}
-
-.menu .button-group {
-  align-items: flex-start;
-  display: flex;
-  gap: 11px;
-  overflow-x: scroll;
-  position: relative;
-  width: 80%;
-}
-
-.menu .button {
-  align-items: center;
+.finel button {
+  padding: 10px;
   background-color: #0075ff;
-  border-radius: 51px;
-  display: inline-flex;
-  flex: 0 0 auto;
-  gap: 10px;
-  justify-content: center;
-  padding: 10px 19px;
-  position: relative;
-}
-
-.menu .button-text {
-  color: #ffffff;
-  font-family: "DM Sans", sans-serif;
-  font-size: 16px;
+  color: white;
   font-weight: 500;
-  letter-spacing: 0;
-  line-height: normal;
-  margin-top: -1px;
-  position: relative;
-  width: fit-content;
-}
-
-.menu .button-text-wrapper {
-  align-items: center;
-  background-color: #0075ff;
-  border-radius: 51px;
-  display: inline-flex;
-  flex: 0 0 auto;
-  gap: 10px;
-  justify-content: center;
-  padding: 10px 19px;
-  position: relative;
-}
-
-.menu .text-field {
-  align-items: center;
-  border: 0.4px solid;
-  border-color: #615d63;
-  border-radius: 12px;
-  display: inline-flex;
-  flex: 0 0 auto;
-  gap: 88px;
-  padding: 6px 14px;
-  position: relative;
-  width: 80%;
-}
-
-.menu .text-placeholder {
-  align-items: flex-start;
-  display: inline-flex;
-  flex: 0 0 auto;
-  flex-direction: column;
-  gap: 24px;
-  position: relative;
-}
-
-.menu .text-wrapper {
-  color: #929292;
-  font-family: "DM Sans-Medium", Helvetica;
+  border: none;
+  border-radius: 5px;
   font-size: 16px;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: normal;
-  margin-top: -1px;
-  position: relative;
-  width: fit-content;
-}
-
-.menu .go-button {
-  align-items: center;
-  background-color: #0075ff;
-  border-radius: 12px;
-  display: inline-flex;
-  flex: 0 0 auto;
-  gap: 10px;
-  justify-content: center;
-  padding: 11px 25px;
-  position: relative;
-}
-
-.menu .go-button-text {
-  color: #ffffff;
-  font-family: "DM Sans-Bold", Helvetica;
-  font-size: 16px;
-  font-weight: 700;
-  letter-spacing: 0;
-  line-height: normal;
-  margin-top: -1px;
-  position: relative;
-  width: fit-content;
+  cursor: pointer;
 }

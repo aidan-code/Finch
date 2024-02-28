@@ -10,7 +10,7 @@ export const OrderCard = () => {
           Order a metal <br /> credit card
         </p>
 
-        <p>
+        <p className="small-txt">
           Earn points fast on dining,
           <br /> supermarkets, travel and more
         </p>

@@ -159,22 +159,22 @@ const VoiceInput = ({ initialPlaceholder }) => {
   return (
     <div>
       <div>
-        <div className="input-container">
-          <input
-            type="text"
-            placeholder={placeholder}
-            value={inputValue}
-            className={`input-field ${inputMode === "voice" ? "voice-mode" : ""}`}
-            onChange={(e) => setInputValue(e.target.value)}
-            onKeyDown={handleKeyDown}
-            disabled={inputMode === "voice"} // Disable input field when in voice input mode
-          />
-        </div>
         <ResponseComponent response={outputValue} />
         {outputValue ===
         "Which account would you like to access? Savings or Checking?" ? (
           <AccountCards />
         ) : null}
+      </div>
+      <div className="input-container">
+        <input
+          type="text"
+          placeholder={placeholder}
+          value={inputValue}
+          className={`input-field ${inputMode === "voice" ? "voice-mode" : ""}`}
+          onChange={(e) => setInputValue(e.target.value)}
+          onKeyDown={handleKeyDown}
+          disabled={inputMode === "voice"} // Disable input field when in voice input mode
+        />
       </div>
 
       <div className="keyboard-frame">

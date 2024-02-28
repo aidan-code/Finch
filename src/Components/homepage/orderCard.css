@@ -10,10 +10,13 @@
   color: white;
 }
 .big-txt {
-  font-size: 7vw;
+  font-size: 6vw;
   font-weight: Bold;
   font-family: DM Sans;
   margin: 10px 0px;
+}
+.small-txt {
+  font-size: 3vw;
 }
 
 .img-s img {

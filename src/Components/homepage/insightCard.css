@@ -1,4 +1,4 @@
-.insight {
+/* .insight {
   background-color: #101010;
   display: flex;
   flex-direction: row;
@@ -190,4 +190,69 @@
   line-height: 20px;
   position: relative;
   width: 322px;
+} */
+
+.insights {
+  /* background-color: black; */
+  color: white;
+  border-radius: 10px;
+  padding: 25px 20px;
+  background-image: linear-gradient(
+    to top left,
+    black,
+    black,
+    black,
+    black,
+    green,
+    gold
+  );
+}
+.insights-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.insi-icon {
+  display: flex;
+  align-items: center;
+}
+.insi-icon p {
+  margin: 0px 5px;
+  font-size: 3vw;
+  text-transform: uppercase;
+}
+
+.insights-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 5px 15px;
+  border-radius: 15px;
+  background-color: transparent;
+  color: white;
+  border: 1px solid white;
+}
+.insitext {
+  margin-top: 10px;
+}
+.val-insi {
+  display: flex;
+  align-items: flex-start;
+}
+
+.val-insi p {
+  font-size: 6vw;
+  font-weight: 600;
+}
+
+.text-insi1 {
+  font-size: 4vw;
+}
+.lg-text {
+  color: #a5a5a5;
+  margin: 20px 0px;
+}
+
+.lg-text .wite {
+  color: white;
 }
