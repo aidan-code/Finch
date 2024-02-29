@@ -69,7 +69,7 @@ const VoiceInput = ({ initialPlaceholder }) => {
   useEffect(() => {
     if (outputValue === "Your savings balance is $5420") {
       // Trigger navigation to the homepage
-      navigate("/");
+      navigate("/savings");
     }
   }, [outputValue, navigate]); // Run effect when outputValue changes
 

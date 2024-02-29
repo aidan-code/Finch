@@ -19,6 +19,7 @@
 .input-field:focus {
   outline: none;
   border-color: #007bff;
+  font-size: 5vw;
 }
 
 .input-container::before {
