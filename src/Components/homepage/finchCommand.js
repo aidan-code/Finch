@@ -3,6 +3,7 @@
 // import menuIcon from "../../Assets/menus.svg";
 // import MicIcon from "../../Assets/Mic.svg";
 // import VoiceCommand from "./commands/voiceCommand";
+// import SiriWave from "siriwave";
 
 // export const FinchCommand = () => {
 //   return (
@@ -28,42 +29,60 @@
 // };
 // export default FinchCommand;
 
-import React, { useState } from "react";
-import "./finchCommand.css";
-import menuIcon from "../../Assets/menus.svg";
-import MicIcon from "../../Assets/Mic.svg";
-import VoiceCommand from "./commands/voiceCommand";
+// import React, { useState, useEffect } from "react";
+// import SiriWave from "siriwave";
+// import VoiceCommand from "./commands/voiceCommand";
+// import MicIcon from "../../Assets/Mic.svg";
 
-export const FinchCommand = () => {
-  const [isVoiceInputActive, setIsVoiceInputActive] = useState(false);
+// const FinchCommand = () => {
+//   const [isMicClicked, setIsMicClicked] = useState(false);
+//   const [siriWave, setSiriWave] = useState(null);
 
-  const handleMicClick = () => {
-    setIsVoiceInputActive(!isVoiceInputActive);
-  };
+//   useEffect(() => {
+//     if (isMicClicked) {
+//       const wave = new SiriWave({
+//         container: document.getElementById("siri-container"),
+//         style: "ios9", // Set style to iOS 9
+//         color: "#15,82,169", // Set color to blue (example)
+//         width: 640,
+//         height: 200,
+//       });
+//       wave.start();
+//       setSiriWave(wave);
+//     } else {
+//       // Dispose the SiriWave instance when mic is not clicked
+//       siriWave?.dispose();
+//       setSiriWave(null);
+//     }
+//   }, [isMicClicked]);
 
-  return (
-    <div className="Quick">
-      <div>
-        {isVoiceInputActive && <VoiceCommand />}{" "}
-        {/* Show VoiceCommand component only when isVoiceInputActive is true */}
-      </div>
-      <div className="mic" onClick={handleMicClick}>
-        {" "}
-        {/* Call handleMicClick when mic icon is clicked */}
-        <img className="mic-icon" alt="Microphone" src={MicIcon} />
-      </div>
+//   const handleMicClick = () => {
+//     setIsMicClicked(!isMicClicked);
+//   };
 
-      <div className="hding">
-        <p>Quick actions</p>
-        <img src={menuIcon} alt="menu" />
-      </div>
-      <div className="btn-ss">
-        <button>Transfer</button>
-        <button>Pay a bill</button>
-        <button>Security Center</button>
-      </div>
-    </div>
-  );
-};
+//   return (
+//     <div className="Quick">
+//       <div>
+//         {isMicClicked && (
+//           <div id="siri-container" style={{ width: "50px", height: "50px" }} />
+//         )}
+//         {isMicClicked && <VoiceCommand />}
+//       </div>
+//       <div className="mic" onClick={handleMicClick}>
+//         <img className="mic-icon" alt="Microphone" src={MicIcon} />
+//       </div>
 
-export default FinchCommand;
+//       <div className="hding">
+//         <p>Quick actions</p>
+//         {/* Add menu icon */}
+//       </div>
+//       <div className="btn-ss">
+//         <button>Transfer</button>
+//         <button>Pay a bill</button>
+//         <button>Security Center</button>
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default FinchCommand;

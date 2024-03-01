@@ -1,7 +1,7 @@
 .input-container {
   display: flex;
   align-items: center;
-  padding: 0px 15px;
+
   gap: 10px;
 }
 
@@ -19,7 +19,11 @@
 .input-field:focus {
   outline: none;
   border-color: #007bff;
-  font-size: 5vw;
+  background-color: #f8f8f8;
+  font-family: "DM Sans", sans-serif;
+  font-style: normal;
+  font-size: 3vw;
+  font-weight: 700;
 }
 
 .input-container::before {
@@ -31,7 +35,7 @@
 .input-field::placeholder {
   font-family: "DM Sans", sans-serif;
   font-style: normal;
-  font-size: 5vw;
-  line-height: 30px;
+  font-size: 3vw;
+
   color: #898989;
 }
