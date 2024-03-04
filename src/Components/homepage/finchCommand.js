@@ -3,14 +3,15 @@ import "./finchCommand.css";
 import menuIcon from "../../Assets/menus.svg";
 import MicIcon from "../../Assets/Mic.svg";
 import VoiceCommand from "./commands/voiceCommand";
-import SiriWaves from "./commands/siriWaves";
+import SpeechWave from "./commands/siriWaves";
+import Siriwave from "react-siriwave";
 
 export const FinchCommand = () => {
   return (
     <div className="Quick">
       <div>
         <VoiceCommand />
-        <SiriWaves />
+        <SpeechWave />
       </div>
       <div className="mic">
         <img className="mic-icon" alt="Microphone" src={MicIcon} />
