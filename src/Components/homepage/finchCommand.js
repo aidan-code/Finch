@@ -43,6 +43,7 @@ import menuIcon from "../../Assets/menus.svg";
 import MicIcon from "../../Assets/Mic.svg";
 import VoiceCommand from "./commands/voiceCommand";
 import SpeechWave from "./commands/siriWaves";
+import OpenAI from "./commands/testgpt";
 
 export const FinchCommand = () => {
   const [isMicClicked, setIsMicClicked] = useState(false);
@@ -53,7 +54,8 @@ export const FinchCommand = () => {
 
   return (
     <div className="Quick">
-      <div>{isMicClicked && <VoiceCommand />}</div>
+      {/* <div>{isMicClicked && <VoiceCommand />}</div> */}
+      <div>{isMicClicked && <OpenAI />}</div>
       <div className="mic">
         <img
           className="mic-icon"
