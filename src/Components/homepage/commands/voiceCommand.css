@@ -6,10 +6,6 @@
 }
 
 .input-field {
-  width: 100%;
-
-  border-left: 1px solid #b2b2b2; /* Only border on the left side */
-  box-sizing: border-box;
   font-family: "DM Sans", sans-serif;
   font-style: normal;
   font-size: 4vw;
@@ -23,21 +19,4 @@
   font-style: normal;
   font-size: 4vw;
   font-weight: 600;
-}
-
-.input-container::before {
-  content: attr(data-placeholder);
-  color: #aaa; /* Placeholder text color */
-  font-family: "DM Sans", sans-serif;
-  font-size: 4vw;
-  font-weight: 600;
-}
-
-.input-field::placeholder {
-  font-family: "DM Sans", sans-serif;
-  font-style: normal;
-  font-size: 4vw;
-  font-weight: 600;
-
-  color: #898989;
 }

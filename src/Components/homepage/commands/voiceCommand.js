@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import ResponseComponent from "../../../Components/voice/responseComponent";
+import ResponseComponent from "./responseComponent";
 import AccountCards from "../../../Components/voice/accountCards";
 import keyboardIcon from "../../../Assets/keyboard.svg";
 import MicIcon from "../../../Assets/Mic.svg";
