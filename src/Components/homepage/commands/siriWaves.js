@@ -1,146 +1,9 @@
-// import React, { useEffect, useRef, useState } from "react";
-// import SpeechRecognition, {
-//   useSpeechRecognition,
-// } from "react-speech-recognition";
-// import "./siriWaves.css"; // Import CSS for styling
-
-// const SpeechWave = () => {
-//   const { transcript, listening, resetTranscript } = useSpeechRecognition();
-//   const [audioStream, setAudioStream] = useState(null);
-//   const canvasRef = useRef(null);
-//   const audioContext = useRef(null);
-//   const analyser = useRef(null);
-//   const requestRef = useRef(null);
-
-//   // Start speech recognition
-//   const startListening = () => {
-//     SpeechRecognition.startListening({ continuous: true });
-//   };
-
-//   // Stop speech recognition
-//   const stopListening = () => {
-//     SpeechRecognition.stopListening();
-//     resetTranscript();
-//   };
-
-//   useEffect(() => {
-//     let stream = null;
-
-//     const initializeMicrophone = async () => {
-//       try {
-//         stream = await navigator.mediaDevices.getUserMedia({ audio: true });
-//         setAudioStream(stream);
-//       } catch (error) {
-//         console.error("Error accessing microphone:", error);
-//       }
-//     };
-
-//     initializeMicrophone();
-
-//     return () => {
-//       if (stream) {
-//         stream.getTracks().forEach((track) => {
-//           track.stop();
-//         });
-//       }
-//     };
-//   }, []);
-
-//   useEffect(() => {
-//     if (audioStream && !audioContext.current) {
-//       audioContext.current = new AudioContext();
-//       analyser.current = audioContext.current.createAnalyser();
-//       const source = audioContext.current.createMediaStreamSource(audioStream);
-//       source.connect(analyser.current);
-
-//       const canvas = canvasRef.current;
-//       const canvasCtx = canvas.getContext("2d");
-
-//       const visualize = () => {
-//         const WIDTH = canvas.width;
-//         const HEIGHT = canvas.height;
-
-//         analyser.current.fftSize = 2048;
-//         const bufferLength = analyser.current.frequencyBinCount;
-//         const dataArray = new Uint8Array(bufferLength);
-
-//         canvasCtx.clearRect(0, 0, WIDTH, HEIGHT);
-
-//         const draw = () => {
-//           requestRef.current = requestAnimationFrame(draw);
-
-//           analyser.current.getByteTimeDomainData(dataArray);
-
-//           canvasCtx.fillStyle = "rgb(200, 200, 200)";
-//           canvasCtx.fillRect(0, 0, WIDTH, HEIGHT);
-
-//           canvasCtx.lineWidth = 2;
-//           canvasCtx.strokeStyle = "rgb(0, 0, 0)";
-
-//           canvasCtx.beginPath();
-
-//           const sliceWidth = (WIDTH * 1.0) / bufferLength;
-//           let x = 0;
-
-//           for (let i = 0; i < bufferLength; i++) {
-//             const v = dataArray[i] / 128.0;
-//             const y = (v * HEIGHT) / 2;
-
-//             if (i === 0) {
-//               canvasCtx.moveTo(x, y);
-//             } else {
-//               canvasCtx.lineTo(x, y);
-//             }
-
-//             x += sliceWidth;
-//           }
-
-//           canvasCtx.lineTo(canvas.width, canvas.height / 2);
-//           canvasCtx.stroke();
-//         };
-
-//         draw();
-//       };
-
-//       visualize();
-//     }
-
-//     return () => {
-//       cancelAnimationFrame(requestRef.current);
-//       if (audioContext.current) {
-//         audioContext.current.close();
-//         audioContext.current = null;
-//         analyser.current = null;
-//       }
-//     };
-//   }, [audioStream]);
-
-//   return (
-//     <div className="speech-container">
-//       <div className={`speech-wave ${listening ? "active" : ""}`}>
-//         {transcript}
-//       </div>
-//       <div className="audio-wave-container">
-//         <canvas ref={canvasRef} className="audio-wave-canvas"></canvas>
-//       </div>
-//       <button
-//         className="speech-button"
-//         onClick={listening ? stopListening : startListening}
-//       >
-//         {listening ? "Stop Listening" : "Start Listening"}
-//       </button>
-//     </div>
-//   );
-// };
-
-// export default SpeechWave;
-
 import React, { useEffect, useRef } from "react";
 
 const SpeechWave = () => {
   const canvasRef = useRef(null);
   const WIDTH = 400;
-  const HEIGHT = 100;
+  const HEIGHT = 40;
 
   useEffect(() => {
     let context;
@@ -163,7 +26,7 @@ const SpeechWave = () => {
       blend: "screen",
       shift: 50,
       width: 60,
-      amp: 1,
+      amp: 0.1,
     };
 
     function range(i) {
@@ -275,7 +138,12 @@ const SpeechWave = () => {
 
   return (
     <div>
-      <canvas ref={canvasRef} width={WIDTH} height={HEIGHT} style={{}}></canvas>
+      <canvas
+        ref={canvasRef}
+        width={WIDTH}
+        height={HEIGHT}
+        style={{ width: "100%" }}
+      ></canvas>
     </div>
   );
 };
